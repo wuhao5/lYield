@@ -4,16 +4,16 @@
 #if defined(__cplusplus)
 extern "C" {
 #endif
-struct lua_State;
+typedef struct lua_State lua_State;
 
 /* open the lib */
-void lyield_open(lua_State*);
+int luaopen_lyield(lua_State*);
 
-/* queue the coroutine or function on top of the stack */
-int lyield_queue(lua_State*);
+/* queue the coroutine or function (all the arguments can be passed followed by the function*/
+int lyield_resume(lua_State*);
 
 /* run the main scheduler; returns number of coroutines in the queue */
-int lyield_run(lua_State* );
+int lyield_run(lua_State*);
 
 #if defined(__cplusplus)
 }

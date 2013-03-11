@@ -1,0 +1,238 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		88C91AF216ED7BB60068A694 /* lyield.c in Sources */ = {isa = PBXBuildFile; fileRef = 88C91AEF16ED7BB60068A694 /* lyield.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		88C91AD516ED56660068A694 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		88C91AD716ED56660068A694 /* liblyield.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblyield.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		88C91AEA16ED78790068A694 /* lyield.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lyield.h; sourceTree = "<group>"; };
+		88C91AEF16ED7BB60068A694 /* lyield.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lyield.c; sourceTree = "<group>"; };
+		88C91AF416ED7C530068A694 /* lauxlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lauxlib.h; sourceTree = "<group>"; };
+		88C91AF516ED7C530068A694 /* lua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lua.h; sourceTree = "<group>"; };
+		88C91AF616ED7C530068A694 /* lua.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lua.hpp; sourceTree = "<group>"; };
+		88C91AF716ED7C530068A694 /* luaconf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = luaconf.h; sourceTree = "<group>"; };
+		88C91AF816ED7C530068A694 /* lualib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lualib.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		88C91AD416ED56660068A694 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		88C91ACE16ED56660068A694 = {
+			isa = PBXGroup;
+			children = (
+				88C91AF316ED7C530068A694 /* lua */,
+				88C91AE916ED78790068A694 /* lyield */,
+				88C91AD816ED56660068A694 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		88C91AD816ED56660068A694 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				88C91AD716ED56660068A694 /* liblyield.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		88C91AE916ED78790068A694 /* lyield */ = {
+			isa = PBXGroup;
+			children = (
+				88C91AEF16ED7BB60068A694 /* lyield.c */,
+				88C91AEA16ED78790068A694 /* lyield.h */,
+			);
+			path = lyield;
+			sourceTree = "<group>";
+		};
+		88C91AF316ED7C530068A694 /* lua */ = {
+			isa = PBXGroup;
+			children = (
+				88C91AF416ED7C530068A694 /* lauxlib.h */,
+				88C91AF516ED7C530068A694 /* lua.h */,
+				88C91AF616ED7C530068A694 /* lua.hpp */,
+				88C91AF716ED7C530068A694 /* luaconf.h */,
+				88C91AF816ED7C530068A694 /* lualib.h */,
+			);
+			path = lua;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		88C91AD616ED56660068A694 /* lyield */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88C91AE516ED56660068A694 /* Build configuration list for PBXNativeTarget "lyield" */;
+			buildPhases = (
+				88C91AD316ED56660068A694 /* Sources */,
+				88C91AD416ED56660068A694 /* Frameworks */,
+				88C91AD516ED56660068A694 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = lyield;
+			productName = lyield;
+			productReference = 88C91AD716ED56660068A694 /* liblyield.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		88C91ACF16ED56660068A694 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = cHaos3D;
+			};
+			buildConfigurationList = 88C91AD216ED56660068A694 /* Build configuration list for PBXProject "lyield" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 88C91ACE16ED56660068A694;
+			productRefGroup = 88C91AD816ED56660068A694 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				88C91AD616ED56660068A694 /* lyield */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		88C91AD316ED56660068A694 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88C91AF216ED7BB60068A694 /* lyield.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		88C91AE316ED56660068A694 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		88C91AE416ED56660068A694 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		88C91AE616ED56660068A694 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/lyield.dst;
+				HEADER_SEARCH_PATHS = .;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		88C91AE716ED56660068A694 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/lyield.dst;
+				HEADER_SEARCH_PATHS = .;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		88C91AD216ED56660068A694 /* Build configuration list for PBXProject "lyield" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88C91AE316ED56660068A694 /* Debug */,
+				88C91AE416ED56660068A694 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88C91AE516ED56660068A694 /* Build configuration list for PBXNativeTarget "lyield" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88C91AE616ED56660068A694 /* Debug */,
+				88C91AE716ED56660068A694 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 88C91ACF16ED56660068A694 /* Project object */;
+}
