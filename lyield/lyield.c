@@ -14,7 +14,7 @@ extern int luaopen_lyield(lua_State* L){
 	lua_pushlightuserdata(L, (void*)&lyield_run);
     lua_newtable(L);
     lua_newtable(L);
-    lua_rawseti(L, -2, IDX_QUEUE1);
+    lua_rawseti(L, -2, IDX_QUEUE2);
 	lua_rawset(L, LUA_REGISTRYINDEX);
     
     // TODO:
@@ -52,9 +52,11 @@ extern int lyield_resume(lua_State* L){
 
     lua_rawgeti(L, -1, queue);
     lua_pushvalue(L, 1);
+    lua_pushvalue(L, 1);
     lua_pushboolean(L, 1);
-    lua_rawset(L, -3);
-	return 0;
+    lua_rawset(L, -4);
+    
+	return 1;   // return the coroutine
 }
 
 extern int lyield_run(lua_State* L){
@@ -76,7 +78,7 @@ extern int lyield_run(lua_State* L){
     int queue1 = first ? IDX_QUEUE1 : IDX_QUEUE2;
     int queue2 = !first ? IDX_QUEUE1 : IDX_QUEUE2;
     lua_rawgeti(L, -1, queue2);
-    if(!lua_istable(L, -2)) {
+    if(!lua_istable(L, -1)) {
         lua_pop(L, 1);      // pop nil
         lua_newtable(L);
         lua_pushvalue(L, -1);
@@ -98,7 +100,7 @@ extern int lyield_run(lua_State* L){
                 lua_pop(L, 1);
         }
     }
-    lua_pop(L, -2);
+    lua_pop(L, 2);
 
     lua_newtable(L);
     lua_rawseti(L, -2, queue1);
@@ -165,7 +167,7 @@ static int resume(lua_State* L, int idx){
 	else if(status == 0 ||	// about to start
 			(status == LUA_YIELD && pollAndClear(cL))){ // yielded but all events are cleared
 		// function at the bottom for the first time
-		int ret = lua_resume(cL, lua_gettop(L) - (status == 0 ? 1 : 0));
+		int ret = lua_resume(cL, lua_gettop(cL) - (status == 0 ? 1 : 0));
 		if(ret == 0) {
 			// the coroutine is finished and
 			// clear the stack because they
